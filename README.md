@@ -1,15 +1,16 @@
 # BIOL7210 Nextflow Workflow
 
-Nextflow pipeline for QC, assembly, and read statistics using fastp, SPAdes, and SeqKit.
-Built for BIOL7210 at Georgia Tech.
+Nextflow pipeline for QC, assembly, and read stat using fastp, SPAdes, and SeqKit.
 
 ## Workflow Overview
 
 ![DAG](dag.png)
 
-- **Module 1 (fastp)**: QC and trim raw paired-end reads
-- **Module 2 (SPAdes)**: Assemble trimmed reads (runs in parallel with Module 3)
-- **Module 3 (SeqKit Stats)**: Compute read statistics (runs in parallel with Module 2)
+- **Module 1 (fastp)**: QC and trim raw reads
+- **Module 2 (SPAdes)**: Assemble trimmed reads
+- **Module 3 (SeqKit Stats)**: Compute read statistics
+
+- Module 2 and 3 run in parallel 
 
 ## Requirements
 
@@ -19,7 +20,7 @@ Built for BIOL7210 at Georgia Tech.
 
 ## Test Data
 
-Paired-end Illumina reads from *Staphylococcus aureus* (SRR1972917), trimmed to 25,000 reads.
+Paired-end Illumina reads from *Staphylococcus aureus* (most well known genome, SRR1972917), trimmed to 25,000 reads.
 Located in `test_data/`.
 
 ## Usage
