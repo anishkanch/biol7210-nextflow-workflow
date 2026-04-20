@@ -37,3 +37,6 @@ nextflow run main.nf -profile conda \
 ## Output
 
 Results are saved to `results/`.
+
+> **Note:** If you encounter memory or CPU errors, adjust the `process_medium` and `process_high` 
+> limits in `conf/base.config` to match your system's available resources.
